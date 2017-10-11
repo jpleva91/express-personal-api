@@ -31,6 +31,17 @@ app.get('/', function homepage(req, res) {
 });
 
 
+let profile = ({
+  name: "Jared",
+  github_link: "https://github.com/jpleva91",
+  github_profile_image: "https://avatars3.githubusercontent.com/u/17632264?v=4&s=400&u=449e98d83424d02b2069df9d3a5e0b301a25c2de",
+  current_city: "Denver",
+  pets: [
+  { name: "Mini", type: "Cat", breed: "Domestic Long Haired" }, 
+  { name: "Ollie", type: "Dog", breed: "Australian Cattle Dog/ Shepherd Mix" }, 
+  { name: "Cisco", type: "Dog", breed: "Albino German Shepherd"}]
+});
+
 /*
  * JSON API Endpoints
  */
@@ -47,7 +58,11 @@ app.get('/api', function api_index(req, res) {
       {method: "GET", path: "/api/profile", description: "Data about me"}, // CHANGE ME
       {method: "POST", path: "/api/campsites", description: "E.g. Create a new campsite"} // CHANGE ME
     ]
-  })
+  });
+});
+
+app.get('/api/profile', function (req, res) {
+  res.json(profile);
 });
 
 /**********
