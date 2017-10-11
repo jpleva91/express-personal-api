@@ -32,7 +32,7 @@ app.get('/', function homepage(req, res) {
 
 
 let profile = ({
-  name: "Jared",
+  name: "Jared Pleva",
   github_link: "https://github.com/jpleva91",
   github_profile_image: "https://avatars3.githubusercontent.com/u/17632264?v=4&s=400&u=449e98d83424d02b2069df9d3a5e0b301a25c2de",
   current_city: "Denver",
