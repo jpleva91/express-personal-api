@@ -12,7 +12,7 @@ app.use(bodyParser.json());
  * DATABASE *
  ************/
 
-// var db = require('./models');
+ var db = require('./models');
 
 /**********
  * ROUTES *
@@ -63,6 +63,14 @@ app.get('/api', function api_index(req, res) {
 
 app.get('/api/profile', function (req, res) {
   res.json(profile);
+});
+
+app.get('/api/movies', function(req, res) {
+  db.Movie.find()
+  .exec(function(err, movies) {
+    if (err) { return console.log(err); }
+    res.json(movies);
+  });
 });
 
 /**********
