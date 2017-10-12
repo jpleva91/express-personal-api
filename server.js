@@ -73,7 +73,28 @@ app.get('/api/movies', function(req, res) {
   });
 });
 
-/**********
+app.get('/api/movies/:id', function(req, res) {
+  db.Movie.findOne({ _id: req.params.id }, function(err, movie) {
+    if(err) { return console.log("Error: ", err); }
+    res.json(movie);
+  });
+});
+
+app.post('/api/movies', function(req, res) {
+  let newMovie = new db.Movie({
+    title: req.body.title,
+    director: req.body.director,
+    characters: req.body.characters
+  });
+
+  newMovie.save(function(err, movie) {
+    if(err) { return console.log("Error: ", err); }
+    console.log("saved: ", movie.title);
+    res.json(movie);
+  });
+});
+
+/********, 
  * SERVER *
  **********/
 
