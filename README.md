@@ -2,6 +2,36 @@
 ## The API
 [Click Here to View the API](https://safe-river-26936.herokuapp.com/ "Click Here")
 
+## Routes
+### Method: "GET",
+Path: "/api",
+Description: "Describes all available endpoints"
+
+##method: "GET",
+path: "/api/profile",
+description: "About Me!"
+
+method: "GET",
+path: "/api/movies",
+description: "INDEX of my favorite movies"
+
+method: "GET",
+path: "/api/movies/:id",
+description: "SHOW a movie by ID"
+
+method: "POST",
+path: "/api/movie",
+description: "CREATE a new movie"
+
+method: "PUT",
+path: "/api/movies/:id",
+description: "UPDATE a movie by ID"
+
+method: "DELETE",
+path: "/apis/movies/:id",
+DESTROY a movie by ID
+
+
 # TO-DO
 ## SUPER STRETCH: Part 2. Personal Dashboard
 
