@@ -94,6 +94,15 @@ app.post('/api/movies', function(req, res) {
   });
 });
 
+app.delete('/api/movies/:id', function(req, res) {
+  console.log("Movie deleted" + req.params);
+  let movieId = req.params.id;
+  db.Movie.findOneandRemove({_id: movieId}, function(err, movie) {
+    if(err) { return console.log("Error:", err); }
+    res.json(movie);
+  });
+});
+
 /********, 
  * SERVER *
  **********/
