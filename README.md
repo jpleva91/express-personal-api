@@ -3,7 +3,7 @@
 [Click Here to View the API](https://safe-river-26936.herokuapp.com/ "Click Here")
 
 ## Routes
-### Method: "GET",
+Method: "GET",
 Path: "/api",
 Description: "Describes all available endpoints"
 
