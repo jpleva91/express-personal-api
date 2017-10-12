@@ -7,29 +7,29 @@ Method: "GET",
 Path: "/api",
 Description: "Describes all available endpoints"
 
-##method: "GET",
-path: "/api/profile",
-description: "About Me!"
+Method: "GET",
+Path: "/api/profile",
+Description: "About Me!"
 
-method: "GET",
-path: "/api/movies",
-description: "INDEX of my favorite movies"
+Method: "GET",
+Path: "/api/movies",
+Description: "INDEX of my favorite movies"
 
-method: "GET",
-path: "/api/movies/:id",
-description: "SHOW a movie by ID"
+Method: "GET",
+Path: "/api/movies/:id",
+Description: "SHOW a movie by ID"
 
-method: "POST",
-path: "/api/movie",
-description: "CREATE a new movie"
+Method: "POST",
+Path: "/api/movie",
+Description: "CREATE a new movie"
 
-method: "PUT",
-path: "/api/movies/:id",
-description: "UPDATE a movie by ID"
+Method: "PUT",
+Path: "/api/movies/:id",
+Description: "UPDATE a movie by ID"
 
-method: "DELETE",
-path: "/apis/movies/:id",
-DESTROY a movie by ID
+Method: "DELETE",
+Path: "/apis/movies/:id",
+Description: "DESTROY a movie by ID"
 
 
 # TO-DO
