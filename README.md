@@ -1,4 +1,6 @@
-
+# Jared's Super Sweet Movies API
+## View the API
+[Click Here](https://safe-river-26936.herokuapp.com/ "Click Here")
 
 # TO-DO
 ## SUPER STRETCH: Part 2. Personal Dashboard
