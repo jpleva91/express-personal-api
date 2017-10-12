@@ -49,14 +49,18 @@ let profile = ({
 app.get('/api', function api_index(req, res) {
   // TODO: Document all your api endpoints below
   res.json({
-    woops_i_has_forgot_to_document_all_my_endpoints: true, // CHANGE ME ;)
+    woops_i_has_forgot_to_document_all_my_endpoints: false,
     message: "Welcome to my personal api! Here's what you need to know!",
-    documentation_url: "https://github.com/example-username/express_self_api/README.md", // CHANGE ME
-    base_url: "http://YOUR-APP-NAME.herokuapp.com", // CHANGE ME
+    documentation_url: "https://github.com/jpleva91/express-personal-api/blob/master/README.md", // CHANGE ME
+    base_url: "https://safe-river-26936.herokuapp.com/api", // CHANGE ME
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
-      {method: "GET", path: "/api/profile", description: "Data about me"}, // CHANGE ME
-      {method: "POST", path: "/api/campsites", description: "E.g. Create a new campsite"} // CHANGE ME
+      {method: "GET", path: "/api/profile", description: "About Me!"}, // CHANGE ME
+      {method: "GET", path: "/api/movies", description: "INDEX of my favorite movies"}, // CHANGE ME
+      {method: "GET", path: "/api/movies/:id", description: "SHOW a movie by ID"},
+      {method: "POST", path: "/api/movie", description: "CREATE a new movie"},
+      {method: "PUT", path: "/api/movies/:id", description: "UPDATE a movie by ID"},
+      {method: "DELETE", path: "/apis/movies/:id", description: "DESTORY a movie by ID"}
     ]
   });
 });
@@ -105,7 +109,7 @@ app.put('/api/movies/:id', function(req, res) {
 
     movie.save(function(err, updatedMovie) {
       if(err) { return console.log("Error: ", err); }
-      res.send(updatedMovie);
+      res.json(updatedMovie);
     });
   });
 });
