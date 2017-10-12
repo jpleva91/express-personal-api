@@ -94,6 +94,22 @@ app.post('/api/movies', function(req, res) {
   });
 });
 
+app.put('/api/movies/:id', function(req, res) {
+  let movieId = req.params.id;
+  db.Movie.findOne({ _id: req.params.id }, function(err, movie) {
+    movie.set({
+      title: req.body.title,
+      director: req.body.director,
+      characters: req.body.characters
+    });
+
+    movie.save(function(err, updatedMovie) {
+      if(err) { return console.log("Error: ", err); }
+      res.send(updatedMovie);
+    });
+  });
+});
+
 app.delete('/api/movies/:id', function(req, res) {
   console.log("Movie deleted" + req.params);
   let movieId = req.params.id;
