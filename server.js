@@ -60,7 +60,7 @@ app.get('/api', function api_index(req, res) {
       {method: "GET", path: "/api/movies/:id", description: "SHOW a movie by ID"},
       {method: "POST", path: "/api/movie", description: "CREATE a new movie"},
       {method: "PUT", path: "/api/movies/:id", description: "UPDATE a movie by ID"},
-      {method: "DELETE", path: "/apis/movies/:id", description: "DESTORY a movie by ID"}
+      {method: "DELETE", path: "/apis/movies/:id", description: "DESTROY a movie by ID"}
     ]
   });
 });
