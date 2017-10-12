@@ -1,5 +1,5 @@
 # Jared's Super Sweet Movies API
-## View the API
+## The API
 [Click Here to View the API](https://safe-river-26936.herokuapp.com/ "Click Here")
 
 # TO-DO
